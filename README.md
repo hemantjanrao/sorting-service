@@ -1,5 +1,6 @@
-# Getting Started
+[![Build Status](https://travis-ci.org/hemantjanrao/sorting-service.svg?branch=master)](https://travis-ci.org/hemantjanrao/sorting-service)
 
+# Getting Started
 
 ## Summary
 
@@ -15,10 +16,15 @@ Install *Required software to run tests from IDE*
 * [IntelliJ IDEA](https://www.jetbrains.com/de-de/idea/)
 * Add Lombok plugin in IntelliJ IDEA from plugin market place
 
+#### Steps
+1. Clone the repository.
+2. Go to ***sorting-service*** folder.
+3. run test / application as mentioned in command line way below
+
 #### Command line way
-#####To run tests     
+##### To run tests     
         mvn clean test
         
-#####To run application locally
+##### To run application locally
         ./mvnw clean spring-boot:run
 

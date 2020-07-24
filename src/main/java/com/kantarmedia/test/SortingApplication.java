@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SortingApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(SortingApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SortingApplication.class, args);
+    }
 }

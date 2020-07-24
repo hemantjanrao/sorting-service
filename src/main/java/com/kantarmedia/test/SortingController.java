@@ -14,18 +14,18 @@ import java.util.Collections;
 public class SortingController {
 
     @GetMapping("/{order}")
-    public SortResponse sort(@PathVariable String order,  @RequestParam(value = "values") @NonNull Integer[] values) throws Exception {
+    public SortResponse sort(@PathVariable String order, @RequestParam(value = "values") @NonNull Integer[] values) throws Exception {
 
-        if(values.length == 0)
+        if (values.length == 0)
             throw new Exception();
 
-        switch(order) {
+        switch (order) {
             case "sort":
                 Arrays.sort(values);
                 break;
 
             case "reverse":
-                Arrays.sort( values, Collections.reverseOrder());
+                Arrays.sort(values, Collections.reverseOrder());
                 break;
 
             default:

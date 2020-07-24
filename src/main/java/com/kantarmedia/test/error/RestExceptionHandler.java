@@ -11,21 +11,18 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
 @RestControllerAdvice
-public class RestExceptionHandler
-{
-    @ExceptionHandler(value = { IOException.class })
+public class RestExceptionHandler {
+    @ExceptionHandler(value = {IOException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    public ErrorResponse badRequest(Exception ex)
-    {
+    public ErrorResponse badRequest(Exception ex) {
         return new ErrorResponse(400, "Bad Request");
     }
 
-    @ExceptionHandler(value = { Exception.class })
+    @ExceptionHandler(value = {Exception.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
-    public ErrorResponse unKnownException(Exception ex)
-    {
+    public ErrorResponse unKnownException(Exception ex) {
         return new ErrorResponse(404, "Not Found");
     }
 }

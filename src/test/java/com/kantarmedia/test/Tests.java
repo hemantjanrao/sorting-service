@@ -46,9 +46,9 @@ public class Tests {
     @Test
     public void isClientErrorTest() throws Exception {
 
-        String[]  testData = new String[]{"abcd", "'@#$#@$#@$#$", ""};
+        String[] testData = new String[]{"abcd", "'@#$#@$#@$#$", ""};
 
-        for(String data: testData) {
+        for (String data : testData) {
             mockMvc.perform(get("/reverse")
                     .contentType("application/json")
                     .queryParam("values", data))
