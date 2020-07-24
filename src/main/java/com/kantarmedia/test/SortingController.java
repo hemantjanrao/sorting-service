@@ -1,5 +1,6 @@
 package com.kantarmedia.test;
 
+import com.kantarmedia.test.response.SortResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,7 +13,7 @@ import java.util.Collections;
 public class SortingController {
 
     @GetMapping("/{order}")
-    public Integer[] sort(@PathVariable String order, @RequestParam(value = "values") Integer[] values) {
+    public SortResponse sort(@PathVariable String order, @RequestParam(value = "values") Integer[] values) {
 
         if (order.equalsIgnoreCase("sort"))
             Arrays.sort(values);
@@ -20,6 +21,6 @@ public class SortingController {
         if (order.equalsIgnoreCase("reverse"))
             Arrays.sort(values, Collections.reverseOrder());
 
-        return values;
+        return new SortResponse(values);
     }
 }
