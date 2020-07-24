@@ -30,10 +30,14 @@ Install *Required software to run tests from IDE*
      
         ./mvnw clean spring-boot:run
 4. Goto Web browser \
-    SORT: \
-    http://localhost:8081/sort?values=10,5,18,35,4,78
+    a. SORT: \
+        http://localhost:8081/sort?values=10,5,18,35,4,78
     
-    REVERSE:\
-    http://localhost:8081/reverse?values=10,5,18,35,4,78         
+        result:{"value":[4,5,10,18,35,78]}
+    
+    b. REVERSE:\
+        http://localhost:8081/reverse?values=10,5,18,35,4,78    
+    
+        result: {"value":[78,35,18,10,5,4]}
         
 
