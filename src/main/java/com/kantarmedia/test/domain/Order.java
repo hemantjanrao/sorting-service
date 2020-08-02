@@ -10,13 +10,9 @@ import javax.persistence.*;
 @Setter
 public class Order {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
     private Integer[] value;
 
-    public Order(Integer[] value) {
-        this.value = value;
-    }
+//    public Order(Integer[] value) {
+//        this.value = value;
+//    }
 }

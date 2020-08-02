@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-    <title>Array sorting</title>
+
+    <title>Sorting service</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
 <div class="container">
-    <h2>Sort array</h2>
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
     <div>
-        <form class="form-horizontal" th:object="${sort}" th:action="@{/sort}" method="post">
+        <form class="form-horizontal" th:object="${sorting}" th:action="@{/getsort}" method="get">
             <div class="form-group">
-                <label class="col-sm-2 control-label">Array:</label>
+                <label class="col-sm-2 control-label">Comma separated values:</label>
                 <div class="col-sm-10">
                     <label>
                         <input type="text" class="form-control" th:field="*{value}"/>
